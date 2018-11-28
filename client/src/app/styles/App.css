@@ -1,32 +1,165 @@
-.App {
-  text-align: center;
+/* 
+Dark:           314455
+Dark-Neutral:   644E5B
+Neutral:        9E5A63
+Light-Neutral:  C96567
+Light:          97AABD
+*/
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+html {
+  font-size: 62.5%;
+  background-color: #c96567;
+  color: #97aabd;
+  padding: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  color: #314455;
+}
+h4 {
+  font-weight: 700;
+}
+
+input {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+
+button,
+button:active,
+button:focus {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Reusable Styles */
+.btn {
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  box-shadow: none;
+  height: 3rem;
+  border-radius: 50rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0.25rem 0.5rem 1.5rem rgba(44, 62, 80, 0.3);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(44, 62, 80, 0.3);
+}
+
+.btn:active {
+  transform: scale(1);
+  box-shadow: 0.25rem 0.5rem 1.5rem rgba(44, 62, 80, 0.3);
+}
+
+.field {
+  height: 3rem;
+  padding: 0 0.6rem;
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+
+/* Component Styles */
+.title {
+  font-size: 6rem;
+}
+
+.userDetails,
+.create-property,
+.property-token-cards,
+.property-registry-cards {
+  background-color: #314455;
+  padding: 4rem;
+  margin-bottom: 4rem;
+}
+
+.userDropdown {
+  display: block;
+  color: #314455;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.select-dropdown {
+  margin-left: 2rem;
+}
+
+.token-approval,
+.token-transfer {
+  margin-bottom: 2rem;
+}
+
+.token-approval-title,
+.transfer-title,
+.create-property-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.approve-btn {
+  margin-left: 1rem;
+}
+
+.create-btn,
+.uri-btn {
+  margin-left: 1.5rem;
+}
+.balance {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.create-label {
+  font-size: 1.4rem;
+}
+
+.create-field {
+  margin-left: 1rem;
+}
+
+.property-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 40rem;
+  width: 30rem;
+  padding: 1rem;
+  background-color: #97aabd;
 }
 
-.App-link {
-  color: #61dafb;
+.property-image {
+  width: 28rem;
+  height: 16rem;
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.prop-card-title {
+  margin-bottom: 2rem;
+}
+
+.prop-owner,
+.prop-token,
+.prop-price {
+  color: #314455;
+  font-size: 1.4rem;
+}
+
+.prop-btn {
+  margin-top: 1rem;
+}
+
+.prop-card-flex {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -23,13 +23,17 @@ class UserDropdown extends Component {
 
   render() {
     return (
-      <>
-        <h1 aria-label="Create property for User">
+      <div className="create-property">
+        <h4
+          className="create-property-title"
+          aria-label="Create property for User"
+        >
           Create Property for {this.props.currentAccount}
-        </h1>
-        <label htmlFor="propertyUrl">
+        </h4>
+        <label className="create-label" htmlFor="propertyUrl">
           Url with Property Details
           <input
+            className="field create-field"
             type="url"
             name="propertyUrl"
             placeholder="Property Url"
@@ -40,15 +44,18 @@ class UserDropdown extends Component {
         <button
           onClick={this.handleCreatePropertyClick}
           onKeyPress={this.clearGeneratedURI}
+          className="btn property-btn"
         >
           Create Property
         </button>
         {this.state.loading ? (
           <p>Generating...</p>
         ) : (
-          <button onClick={this.generateURI}>Generate URI</button>
+          <button className="btn uri-btn" onClick={this.generateURI}>
+            Generate URI
+          </button>
         )}
-      </>
+      </div>
     );
   }
 }
